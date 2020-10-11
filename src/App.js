@@ -11,7 +11,7 @@ function App() {
          const data = new FormData()
          data.append('file', selectFile)
          console.log(data)
-        const result = await axios.post("http://localhost:4000/upload", data)
+        const result = await axios.post("http://localhost:4001/upload", data)
        
         setSize(result.data.fileSize);
         setSha1(result.data.sha1_format);
