@@ -21,8 +21,9 @@ function App() {
   return (
     <div className="app">
       <p class="form-group files">
+      {size > 0 ? <p><strong>Your file size is ${size} and sha1 is ${sha1}</strong></p>:null}
         <label>Upload Your File </label>
-  {size > 0 ? <p>Your file size is ${size} and sha1 is ${sha1}</p>:null}
+  
         <input type="file" name="file" onChange={(e) => setSelectFile(e.target.files[0])} />
       </p>
     
